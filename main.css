@@ -16,6 +16,10 @@ li {
     margin-right: 15px;
 }
 
+footer {
+    border-top: 1px solid black;
+}
+
 footer p {
     font-size: 80%;
 }
