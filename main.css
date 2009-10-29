@@ -38,12 +38,24 @@ li {
     margin-right: 15px;
 }
 
-footer {
-    border-top: 1px solid black;
+header {
+    border-bottom: 1px solid black;
 }
 
+section {
+    height: 400px;
+}
+
+footer {
+    border-top: 1px solid black;
+    padding: 5px;
+}
 footer p {
     font-size: 80%;
 }
 
+/*This is needed to display some of the properties on the new HTML5 tags*/
+header, nav, footer, section {
+    display: block;
+}
     
