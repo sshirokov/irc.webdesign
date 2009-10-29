@@ -1,8 +1,32 @@
 body { 
+    margin:0 0 0 100px;
+    padding:0 0 0 0;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 200px;
     font-size: 1em;
- }
+    background-color:#7777bb;
+}
+
+section {
+    margin:0 0 0 0;
+    padding:10px 10px 10px 10px;
+    background-color:#FFFFFF;
+}
+
+header {
+    margin:0 0 0 0;
+    padding:0 0 10px 0;
+    border-bottom: 1px solid black;
+}
+
+hgroup {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
 
 h1 { 
     font-weight: bold;
@@ -29,6 +53,10 @@ h6 {
     font-size: .6em;
 }
 
+nav {
+    
+}
+
 ul {
     list-style-type: none;
 }
@@ -38,24 +66,24 @@ li {
     margin-right: 15px;
 }
 
-header {
-    border-bottom: 1px solid black;
-}
-
-section {
-    height: 400px;
+article {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
 }
 
 footer {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
     border-top: 1px solid black;
     padding: 5px;
 }
+
 footer p {
     font-size: 80%;
 }
 
 /*This is needed to display some of the properties on the new HTML5 tags*/
-header, nav, footer, section {
+header, nav, footer, section, article {
     display: block;
 }
     
