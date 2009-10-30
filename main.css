@@ -71,6 +71,10 @@ article {
     padding:0 0 0 0;
 }
 
+table#log {
+	font-family: monospace;
+}
+
 footer {
     margin:0 0 0 0;
     padding:0 0 0 0;
