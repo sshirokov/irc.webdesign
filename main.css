@@ -12,18 +12,8 @@ header#head {
     background-color: #ffffff;
 }
 
-nav {
+nav, article, footer {
     padding:0 10px 10px 10px;
-    background-color: #ffffff;
-}
-
-article {
-	padding:0 10px 10px 10px;
-    background-color: #ffffff;
-}
-
-footer {
-	padding:0 10px 10px 10px;
     background-color: #ffffff;
 }
 
