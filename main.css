@@ -10,6 +10,7 @@ header {
     margin:0 0 0 0;
     padding:0 0 10px 0;
     border-bottom: 1px solid black;
+    background-color: #ffffff;
 }
 
 hgroup {
@@ -48,7 +49,7 @@ h6 {
 }
 
 nav {
-    
+    background-color: #ffffff;
 }
 
 ul {
@@ -63,6 +64,7 @@ li {
 article {
     margin:0 0 0 0;
     padding:0 0 0 0;
+    background-color: #ffffff;
 }
 
 table#log {
@@ -74,6 +76,7 @@ footer {
     padding:0 0 0 0;
     border-top: 1px solid black;
     padding: 5px;
+    background-color: #ffffff;
 }
 
 footer p {
