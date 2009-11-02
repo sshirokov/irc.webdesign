@@ -76,18 +76,18 @@ header.article {
 }
 
 	/*Footer*/
-p#footborder{
+h6#footborder{
 	padding:10px 0 0 0;
 	border-top: 1px solid black;
+}
+
+footer h6 {
+	font-weight: normal;
 }
 
 	/*Log*/
 table#log {
 	font-family: monospace;
-}
-
-footer p {
-    font-size: 80%;
 }
 
 /*This is needed to display some of the properties on the new HTML5 tags*/
