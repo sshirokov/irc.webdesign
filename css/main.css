@@ -7,8 +7,28 @@ body {
     background-color:#7777bb;
 }
 
+#wrap {
+    background-color: white;
+    height: 500px;
+    width: 1165px;
+}
+
+#side {
+    width: 400px;
+    float: right;
+}
+
+#content {
+    padding: 10px 0px 0px 10px;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+    
+
 header#head {
-    padding:10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     background-color: #ffffff;
 }
 
@@ -94,6 +114,29 @@ footer h6 {
 table#log {
 	font-family: monospace;
 }
+
+table#log th:nth-child {
+	font-size: 150%;
+}
+
+table#log tr:nth-child(even) {
+	background: #7777BB;
+}
+
+table#log tr > td:first-child {
+    width: 75px;
+}
+
+table#log tr > td:nth-child(2n) {
+    font-weight: bold;
+}
+
+table#log tr > td:nth-child(3n) {
+    width: 400px;
+}
+
+
+
 
 /*This is needed to display some of the properties on the new HTML5 tags*/
 header, nav, footer, section, article {
