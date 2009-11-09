@@ -1,45 +1,26 @@
 /* Organize CSS elements by position in tree. */
 
-body { 
-    margin:0 0 0 100px;
-    font-family: Arial, Helvetica, sans-serif;
+body {
     font-size: 1em;
-    background-color:#7777bb;
 }
 
 #wrap {
-    background-color: white;
-    height: 500px;
-    width: 1165px;
 }
 
 #side {
-    width: 400px;
-    float: right;
 }
 
 #content {
-    padding: 10px 0px 0px 10px;
-    background-color: white;
-    width: 500px;
-    height: 300px;
-    float: left;
 }
     
-
 header#head {
-    padding: 10px 10px 10px 10px;
-    background-color: #ffffff;
 }
 
 nav, article, footer {
-    padding:0 10px 10px 10px;
-    background-color: #ffffff;
 }
 
-	/*Generics*/
+/*Generics*/
 h1 { 
-    font-weight: bold;
     font-size: 1.8em;
 }
 
@@ -63,64 +44,47 @@ h6 {
     font-size: .6em;
 }
 
-	/*Header*/
+/*Header*/
 h6#tagline {
-	padding:0 0 10px 0;
-    border-bottom: 1px solid black;
 }
 
-	/*Navi*/
+/*Navi*/
 ul {
-    padding:0 10px 0 0;
     list-style-type: none;
 }
 
 li {
     display: inline;
-    margin-right: 15px;
 }
 
 li a {
-	color: #7777bb;
-	text-decoration: none;
 }
 
 li a:hover {
-	color: #8888cc;
-	font-weight:bold;
 }
 
 li a:visited {
-	color: #555599;
-	text-decoration: none;
 }
 
-	/*Article*/
+/*Article*/
 header.article {
-    padding:0 0 10px 0;
 }
 
-	/*Footer*/
-h6#footborder{
-	padding:10px 0 0 0;
-	border-top: 1px solid black;
+/*Footer*/
+footer {
 }
 
-footer h6 {
-	font-weight: normal;
-}
-
-	/*Log*/
+/*Log*/
 table#log {
-	font-family: monospace;
+   font-family: monospace;
 }
 
 table#log th:nth-child {
-	font-size: 150%;
+   font-size: 150%;
 }
 
 table#log tr:nth-child(even) {
-	background: #7777BB;
+    background: #7777BB;
 }
 
 table#log tr > td:first-child {
@@ -134,9 +98,6 @@ table#log tr > td:nth-child(2n) {
 table#log tr > td:nth-child(3n) {
     width: 400px;
 }
-
-
-
 
 /*This is needed to display some of the properties on the new HTML5 tags*/
 header, nav, footer, section, article {
