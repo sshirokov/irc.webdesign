@@ -81,7 +81,7 @@ function Logging(interval) {
 
   this.draw_some_latest = function(parent, row, count, options) {
     parent = $(parent);
-    var date_format = options.date || "%h:%m:%s";
+    var date_format = options.date || "G:i:s";
     var default_action = {
       prefix: "* ",
       attr: 'action'
@@ -111,10 +111,39 @@ function Painter(logs, parent, row, count, formats) {
     __trace_prefix("Painter:Debug:", arguments);
   };
 
-  this.paint = function() {
-    this.trace("Painting:", this);
+  this.grab_log_segment = function(reverse) {
+    var segment = [];
+    for(var i = 0; (i <= count) && (i < logs.latest_feed.length); i++) {
+      segment = segment.concat(logs.latest_feed[i]);
+    }
+    if(reverse) segment = segment.reverse();
+    return segment;
   };
 
+  this.format_date = function(date) {
+    return date.formatDate(formats.date, date);
+  };
+
+  this.paint = function() {
+    var that = this;
+    this.trace("Painting:", this);
+
+    this.trace("Clearing:", parent, row);
+    parent.find(row).remove();
+    $.each(this.grab_log_segment(true), function() {
+             var log = this;
+             var new_row = that.row_template.clone();
+             new_row.find(".nick").text(log.source);
+             new_row.find(".message").text(log.text);
+             new_row.find(".stamp").text(that.format_date(log.created_at));
+             that.trace("Built", new_row, "for log:", log.id);
+             parent.append(new_row);
+           });
+  };
+
+  var rows = $(parent).find(row);
+  this.row_template = $(rows.get(0)).clone();
+  this.trace("Template row:", this.row_template);
   this.trace("Painter Created.");
 
   return this;

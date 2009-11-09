@@ -1,8 +1,8 @@
-window.logs = new Logging(3);
+window.logs = new Logging(10);
 
 var ready = function() {
   logs.draw_some_latest("table#log", ".row", 10, {
-                          date: "At %h:%m",
+                          date: "%A%t g:i",
                           action: {
                             prefix: "* ",
                             attr: 'action'
