@@ -1,5 +1,7 @@
-$(document).ready(function(){
+window.logs = Logging(10);
 
-    //Just to have this available.
+$(document).ready(function() {
+  console.log("Ready");
 
+  console.log("Done");
 });
