@@ -38,6 +38,8 @@ function Logging(interval) {
   this.latest_feed = [];
   this.updated_at = null;
   this.interval = interval;
+  this.painters = [];
+
 
   this.trace = function() {
     if(window.console === undefined) return undefined;
@@ -46,11 +48,12 @@ function Logging(interval) {
 
   this._tick = function() {
     this.trace("Tick");
-    this.fetch_feed();
+    this.fetch_feed(this.draw);
   };
 
   this.fetch_feed = function() {
-    us = this;
+    var us = this;
+    var notify = arguments;
     $.getJSON(this.feed_url,
               function(data, status) {
                 us.latest_feed = data.reduce(function(acc, l) {
@@ -58,13 +61,46 @@ function Logging(interval) {
                                                l.channel_log.created_at = (new Date()).setISO8601(l.channel_log.created_at);
                                                return acc.concat(l.channel_log);
                                              }, []);
+                us.updated_at = new Date();
+                us.trace("Calling fetch notifications.");
+                $.each(notify, function() {this.apply(us);});
               });
-    this.updated_at = new Date();
     this.trace("Logs fetched.");
   };
 
-  this._timer = setInterval(this._tick, this.interval * 1000);
+  this.draw = function() {
+    this.trace("Painting");
+  };
+
+  this.draw_some_latest = function(parent, row, count, options) {
+    parent = $(parent);
+    var date_format = options.date || "%h:%m:%s";
+    var default_action = {
+      prefix: "* ",
+      attr: 'action'
+    };
+    var action = options.action || default_action;
+    action.prefix = action.prefix || default_action.prefix;
+    action.attr = action.attr || default_action.attr;
+    this.trace("Registering painter:", parent, "=" + count + "=>", row, date_format, action);
+    try {
+      //this.painters.concat(new Painter(this, parent, row, count, {date: date_format, row: action}));
+    }
+    catch(e) {
+      this.trace("Error building painter:", e);
+    }
+  };
+
+  var that = this;
+  this._timer = setInterval(function() { that._tick.apply(that); },
+                            this.interval * 1000);
   this._tick();
+
+  return this;
+}
+
+function Painter(logs, parent, row, count, formats) {
+  logs.trace("Painter Created.");
 
   return this;
 }
