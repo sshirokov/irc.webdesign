@@ -5,7 +5,7 @@ var ready = function() {
   //        relative path from container to what a row looks like
   //        seconds between refresh
   //        options object
-  logs.draw_some_latest("table#log", ".row", 50, {
+  logs.draw_some_latest("table#log", ".row", 30, {
                           date: "%A%t g:i", //How to format a date, according to php.net/date
                           action: {
                             prefix: "* ",   //What to put in front of a nick performing a /me
