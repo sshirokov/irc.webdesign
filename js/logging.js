@@ -1,4 +1,3 @@
-console.log("Altering date");
 //From: http://dansnetwork.com/2008/11/01/javascript-iso8601rfc3339-date-parser/
 Date.prototype.setISO8601 = function(dString){
 
@@ -30,7 +29,11 @@ Date.prototype.setISO8601 = function(dString){
   }
   return this;
 };
-console.log("Date altered");
+
+function __trace_prefix(prefix, args) {
+  if(window.console === undefined) return undefined;
+  else return window.console.log.apply(window.console, $.merge([prefix], args));
+}
 
 
 function Logging(interval) {
@@ -42,8 +45,9 @@ function Logging(interval) {
 
 
   this.trace = function() {
-    if(window.console === undefined) return undefined;
-    else return window.console.log.apply(window.console, $.merge(["Logging()::Debug: "], arguments));
+    __trace_prefix("Logger::Debug:", arguments);
+    //if(window.console === undefined) return undefined;
+    //else return window.console.log.apply(window.console, $.merge(["Logging()::Debug: "], arguments));
   };
 
   this._tick = function() {
@@ -84,7 +88,7 @@ function Logging(interval) {
     action.attr = action.attr || default_action.attr;
     this.trace("Registering painter:", parent, "=" + count + "=>", row, date_format, action);
     try {
-      //this.painters.concat(new Painter(this, parent, row, count, {date: date_format, row: action}));
+      this.painters.concat(new Painter(this, parent, row, count, {date: date_format, row: action}));
     }
     catch(e) {
       this.trace("Error building painter:", e);
@@ -100,7 +104,11 @@ function Logging(interval) {
 }
 
 function Painter(logs, parent, row, count, formats) {
-  logs.trace("Painter Created.");
+  this.trace = function() {
+    __trace_prefix("Painter:Debug:", arguments);
+  };
+
+  this.trace("Painter Created.");
 
   return this;
 }

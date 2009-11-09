@@ -1,4 +1,4 @@
-window.logs = new Logging(10);
+window.logs = new Logging(3);
 
 var ready = function() {
   logs.draw_some_latest("table#log", ".row", 10, {
