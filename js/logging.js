@@ -73,7 +73,10 @@ function Logging(interval) {
   };
 
   this.draw = function() {
-    this.trace("Painting");
+    this.trace("Drawing");
+    $.each(this.painters, function() {
+             this.paint();
+           });
   };
 
   this.draw_some_latest = function(parent, row, count, options) {
@@ -88,24 +91,28 @@ function Logging(interval) {
     action.attr = action.attr || default_action.attr;
     this.trace("Registering painter:", parent, "=" + count + "=>", row, date_format, action);
     try {
-      this.painters.concat(new Painter(this, parent, row, count, {date: date_format, row: action}));
+      this.painters = this.painters.concat(new Painter(this, parent, row, count, {date: date_format, row: action}));
+      this.trace("Painters now:", this.painters);
     }
     catch(e) {
       this.trace("Error building painter:", e);
     }
+    this._tick();
   };
 
   var that = this;
   this._timer = setInterval(function() { that._tick.apply(that); },
                             this.interval * 1000);
-  this._tick();
-
   return this;
 }
 
 function Painter(logs, parent, row, count, formats) {
   this.trace = function() {
     __trace_prefix("Painter:Debug:", arguments);
+  };
+
+  this.paint = function() {
+    this.trace("Painting:", this);
   };
 
   this.trace("Painter Created.");
