@@ -124,6 +124,15 @@ function Painter(logs, parent, row, count, formats) {
     return date.formatDate(formats.date, date);
   };
 
+  this.format_row = function(new_row, log) {
+    if(log.type == 'ctcp') {
+      //Apply action filters
+      new_row.find('.nick').text(formats.row.prefix + new_row.find('.nick').text());
+      new_row.addClass(formats.row.attr);
+    }
+    return new_row;
+  };
+
   this.paint = function() {
     var that = this;
     this.trace("Painting:", this);
@@ -136,6 +145,7 @@ function Painter(logs, parent, row, count, formats) {
              new_row.find(".nick").text(log.source);
              new_row.find(".message").text(log.text);
              new_row.find(".stamp").text(that.format_date(log.created_at));
+             new_row = that.format_row(new_row, log);
              that.trace("Built", new_row, "for log:", log.id);
              parent.append(new_row);
            });
