@@ -1,9 +1,9 @@
-window.logs = new Logging(10);
+window.logs = new Logging(10);  // Define refresh interval
 
 var ready = function() {
   //Params: path to container,
   //        relative path from container to what a row looks like
-  //        seconds between refresh
+  //        number of rows to draw
   //        options object
   logs.draw_some_latest("table#log", ".row", 10, {
                           date: "%A%t g:i", //How to format a date, according to php.net/date
