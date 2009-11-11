@@ -5,15 +5,67 @@ body {
 }
 
 #wrap {
+    width: 1010px;
 }
 
-#side {
+#intro {
+    float: left;
+    width: 400px;
+    border: 2px solid black;
 }
 
-#content {
+#logs {
+    border: 2px solid black;
+    float: left;
+    height: 400px;
+    width: 500px;
+    margin: 0px 0px 100px 100px;
 }
     
-header#head {
+#issues {
+    width: 1000px;
+    float: left;
+}
+
+.issue {
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.info {
+    float: left;
+    height: 100px;
+    width: 150px;
+    border-right: 1px solid black;
+}
+
+.replies {
+    float: left;
+    height: 100px;
+    width: 100px;
+    border-right: 1px solid black;
+}
+
+.question {
+    width: 500px;
+    float: left;
+}
+
+#one {
+    margin-bottom: 10px;
+}
+
+#two {
+    margin-bottom: 10px;
+}
+
+#three {
+    margin-bottom: 10px;
+}
+
+#four {
+    margin-bottom: 10px;
 }
 
 nav, article, footer {
@@ -103,4 +155,10 @@ table#log tr > td:nth-child(3n) {
 header, nav, footer, section, article {
     display: block;
 }
-    
+
+
+
+.issue {
+    display: block;
+    margin-bottom: 50px;
+}

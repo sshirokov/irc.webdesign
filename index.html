@@ -10,7 +10,6 @@
     <script src="/js/index.js" type="text/javascript"></script>
   </head>
   <body>
-
     <header id="head">
       <hgroup>
 	<img src="media/logo_header.png"/>
@@ -19,22 +18,99 @@
 
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="logs.html">Logs</a></li>
-        <li><a href="http://github.com/sshirokov/irc.webdesign">Github</a></li>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="logs.html">Logs</a></li>
+	<li><a href="http://github.com/sshirokov/irc.webdesign">Github</a></li>
       </ul>
     </nav>
 
-    <h4>Recent Logs:</h4>
-    <table border="0" cellspacing="5" cellpadding="5" id="log">
-      <tr><th>Time</th><th>User</th><th>Message</th></tr>
-      <tr class="row">
-        <td class="stamp">At 00:00</td>
-        <td class="nick">jensechu</td>
-        <td class="message">Omg did you hear that I am
-          awesome?</td>
-      </tr>
-    </table>
-    
+    <div id="wrap">
+
+      <div id="intro">
+	Cras accumsan interdum commodo. Etiam gravida, tellus ultrices convallis adipiscing, eros magna ullamcorper augue, sed scelerisque velit ligula id ligula. Nam vel velit mauris, non pharetra mauris. In euismod, urna in ornare tincidunt, odio nibh tincidunt odio, sed tempor massa neque non elit. Nam et sapien vitae diam luctus elementum ut fringilla lectus. Duis fringilla aliquet lectus a adipiscing. Nulla a erat mi. Mauris sodales laoreet pulvinar. In viverra augue ac dui pellentesque egestas at vitae quam. In hac habitasse platea dictumst. Mauris lorem nulla, mollis eget auctor in, feugiat sit amet sem. Sed vel justo eget eros egestas molestie sit amet id orci.
+      </div>
+
+      <div id="logs">
+	<h4>Recent Logs:</h4>
+	<table border="0" cellspacing="5" cellpadding="5" id="log">
+	  <tr><th>Time</th><th>User</th><th>Message</th></tr>
+	  <tr class="row">
+	    <td class="stamp">At 00:00</td>
+	    <td class="nick">jensechu</td>
+	    <td class="message">Omg did you hear that I am
+	    awesome?</td>
+	  </tr>
+	</table>
+      </div>
+
+      <div id="issues">
+	<h3>Recent Discussions:</h3>
+
+	<div id="one" class="issue">
+	  <div class="info">
+	    <h5>Jensechu
+	    Posted on 11/10/09</h5>
+	  </div>
+	  <div class="replies">
+	    <h3>2</h3>
+	    replies
+	  </div>
+	  <div class="question">
+	  <h4>"How do I get this annoying thing to work in IE?"</h4>
+	    #development, #ie, #position
+	  </div>
+	</div>
+
+	<div id="two" class="issue">
+	  <div class="info">
+	    <h5>Baconmatic
+	    Posted on 11/11/09</h5>
+	  </div>
+	  <div class="replies">
+	    <h3>7</h3>
+	    replies
+	  </div>
+	  <div class="question">
+	  <h4>"Critique my rough draft of this new blogging site I made."</h4>
+	    #development, #critique, #design, #blog, #cms
+	  </div>
+	</div>
+
+	<div id="three" class="issue">
+	  <div class="info">
+	    <h5>cyoz
+	    Posted on 11/09/09</h5>
+	  </div>
+	  <div class="replies">
+	    <h3>4</h3>
+	    replies
+	  </div>
+	  <div class="question">
+	  <h4>"Does anyone have experience with creating custom tiled backgrounds?"</h4>
+	    #design, #graphic, #background, #help
+	  </div>
+	</div>
+
+	<div id="four" class="issue">
+	  <div class="info">
+	    <h5>zamikazi
+	    Posted on 11/10/09</h5>
+	  </div>
+	  <div class="replies">
+	    <h3>1</h3>
+	    replies
+	  </div>
+	  <div class="question">
+	  <h4>"I was working a plug-in with jQuery to make a slideshow, and it won't let me set this value..."</h4>
+	    #development, #jQuery, #programming
+	  </div>
+	</div>
+
+	<footer>
+	  Contribute to the site!
+	</footer>
+
+      </div>
+    </div>
   </body>
 </html>
