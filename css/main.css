@@ -1,108 +1,107 @@
-		*{
-		font-family: Helvetica;
-		}
-		
-		#container{
-		width: 960px;
-		margin: auto;
-		}
-		
-		#header{
-		float: left;
-		font-size: 3em;
-		font-weight: bold;
-		margin: 0;
-		margin-bottom: 10px;
-		}
-		#nav{
-		float: right;
-		}
-		#nav li{
-		margin: 0;
-		font-size: 1.8em;
-		float: left;
-		font-weight: bold;
-		padding: 0 20px;
-		margin-bottom: 20px;
-		list-style: none;
-		}
-		
-		#blurb{
-		font-size: 1.8em;
-		width: 520px;
-		float: left;
-		color: #ccc;	
-		margin: 0;
-		padding: 0;	
-		}
-		
-		p{
-		margin: 0;
-		}
-		
-		.green{
-		color: #00b110;
-		font-weight: bold;
-		}
-		
-		.orange{
-		color: #d69c0c;
-		font-weight: bold;
-		}
-		
-		#conversation{
-		float: right;
-		width: 422px;
-		height: 400px;
-		background: #f0f0f0;
-		-webkit-border-radius:10px;
-		-moz-border-radius: 10px;
-		margin-bottom: 20px;
-		padding-bottom: 10px;
-		}
-		
-		#conversation table{
-		color: #999;
-		}
-		
-		#conversation tr{
-		display: block;
-		}
-		
-		#conversation tr:nth-child(even) td:nth-child(3){
-		background: #6F81FF;
-		
-		}
-		.message{
-		background: #BFD0FF;
-		color: black;
-		padding: 10px;
-				-webkit-border-radius:10px;
-				-moz-border-radius: 10px;
-		}
-		
-		.nick{
-		font-weight: bold;
-		}
-		
-		#tracker{
-		width: 960px;
-		height: 400px;
-		clear: both;
-		}
-		
-		.issue{
-		background: #f6f6f6;
-		height: 100px;
-		margin-bottom: 10px;
-		border: 1px solid #ccc;
-		}
-		
-		#tracker h1{
-		border-bottom: 3px solid black; 
-		}
-		
-		.clear{
-		clear: both;
-		}
-		
+q		*{
+	font-family: Helvetica;
+}
+
+#container{
+	width: 960px;
+	margin: auto;
+}
+
+#header{
+	float: left;
+	font-size: 3em;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 10px;
+}
+#nav{
+	float: right;
+}
+#nav li{
+	margin: 0;
+	font-size: 1.8em;
+	float: left;
+	font-weight: bold;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+#blurb{
+	font-size: 1.8em;
+	width: 520px;
+	float: left;
+	color: #ccc;	
+	margin: 0;
+	padding: 0;	
+}
+
+p{
+	margin: 0;
+}
+
+.green{
+	color: #00b110;
+	font-weight: bold;
+}
+
+.orange{
+	color: #d69c0c;
+	font-weight: bold;
+}
+
+#conversation{
+	float: right;
+	width: 422px;
+	height: 400px;
+	background: #f0f0f0;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+#conversation table{
+	color: #999;
+}
+
+#conversation tr{
+	display: block;
+}
+
+#conversation tr:nth-child(even) td:nth-child(3){
+	background: #6F81FF;
+	
+}
+.message{
+	background: #BFD0FF;
+	color: black;
+	padding: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+}
+
+.nick{
+	font-weight: bold;
+}
+
+#tracker{
+	width: 960px;
+	height: 400px;
+	clear: both;
+}
+
+.issue{
+	background: #f6f6f6;
+	height: 100px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+#tracker h1{
+	border-bottom: 3px solid black; 
+}
+
+.clear{
+	clear: both;
+}
