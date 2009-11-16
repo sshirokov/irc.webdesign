@@ -1,0 +1,10 @@
+#conversation{
+/*	float: right; */
+	width: 99%;
+/* 	height: 400px; */
+	background: #f0f0f0;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
